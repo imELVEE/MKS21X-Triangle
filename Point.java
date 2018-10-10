@@ -7,6 +7,11 @@ public class Point{
 		this.y = y;
 	}
 
+	public Point(Point p) {
+		x = p.x;
+		y = p.y;
+	}
+
 	public double getX() {
 		return x;
 	}
@@ -19,7 +24,7 @@ public class Point{
 		return Math.sqrt( Math.pow(toP.x - x , 2) + Math.pow(toP.y - y , 2) );
 	}
 
-	public double distance(Point froP, Point toP) {
+	public static double distance(Point froP, Point toP) {
 		return Math.sqrt( Math.pow(toP.x - froP.x , 2) + Math.pow(toP.y - froP.y , 2) );
 	}
 
