@@ -3,6 +3,7 @@ public class Triangle{
 	private Point v2;
 	private Point v3;
 
+
 	public Triangle(Point v1, Point v2, Point v3) {
 		this.v1 = v1;
 		this.v2 = v2;
@@ -28,9 +29,12 @@ public class Triangle{
 	public void setVertex(int index, Point newP) {
 		Point[] points = {v1, v2, v3};
 		points[index] = new Point(newP);
+		v1 = points[0];
+		v2 = points[1];
+		v3 = points[2];
 	}
 
 	public String toString() {
-		return ("Triangle: A" + v1 + " B" + v2 + " C" + v3);
+		return ("Triangle: A - (" + v1 + ") | B - (" + v2 + ") | C - (" + v3 + ")");
 	}
 }
